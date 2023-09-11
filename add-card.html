@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajoutez une carte de voyage !</title>
+
+    <!-- Bootstap Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body>
+    <div class="container-fluid text-center background-image">
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom fixed-top" data-bs-theme="dark">
+          <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="navbar-brand" href="index.html">
+                      <i class="fa-solid fa-umbrella-beach fa-bounce fa-sm" style="color: orange;"></i><span> My Portofolio</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="add-card.html">Ajouter un voyage</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Que cherchez vous ?" aria-label="Search">
+                  <button class="btn btn-outline-info" type="submit">Recherche</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+        <div class="container-fluid text-center mb-2">
+            <div class="row mt-2 mb-2 pt-3 justify-content-center">
+                <div class="col-md-6 mt-5">
+                    <form id="FormSendTravel" enctype="multipart/form-data">
+                        <div class="card p-3">
+                            <div class="card-header">
+                                <h3><i class="fa-solid fa-plane-departure"></i>
+                                    <span style="margin-left: 15px; margin-right: 15px;">Ajoutez votre voyage !</span>
+                                    <i class="fa-solid fa-suitcase-rolling"></i></h3>
+                            </div>
+                            <div class="card-body" style="text-align: left !important;">
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Titre</label>
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="Lieu visité">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="description" class="form-label">Description</label>
+                                    <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ref_img" class="form-label">Votre image</label>
+                                    <input class="form-control" type="file" name ="ref_img" id="ref_img">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                            </div>
+                        </div>
+                    </form> 
+                </div>
+            </div>
+            <hr/>
+            <div class="row mt-2 mb-2 pt-3 justify-content-center"></div>
+        </div>
+    </div>
+    <!-- Modal pour afficher les retours de formulaire -->
+    <div class="modal" id="message-modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Que s'est il passé ?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="returnMessage">
+              <p>Ici le text de retour de formulaire.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- Bootstap Scipts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d2149e3e03.js" crossorigin="anonymous"></script>
+    <!-- Moment -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment-locale-fr@1.0.0/fr.min.js"></script>
+    <!-- Custom -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/translations/fr.js"></script>
+    <script src="./assets/js/custom.js"></script>
+
+    <script>
+    ClassicEditor
+        .create( document.querySelector( '#description' ), {
+            language: {
+            ui: 'fr',
+            content: 'fr'
+        }
+        } )
+        .catch( error => {
+            console.error( error );
+        } );
+    </script>
+</body>
+</html>

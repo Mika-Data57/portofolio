@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portofolio</title>
+
+    <!-- Bootstap Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/custom.css">
+</head>
+<body>
+<div class="container-fluid text-center">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom fixed-top" data-bs-theme="dark">
+      <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="navbar-brand" href="index.html">
+                  <i class="fa-solid fa-umbrella-beach fa-bounce fa-sm" style="color: orange;"></i><span> My Portofolio</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="add-card.html">Ajouter un voyage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Que cherchez vous ?" aria-label="Search">
+              <button class="btn btn-outline-info" type="submit">Recherche</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class="container-fluid text-center mb-5 pb-5">
+      <div class="row mt-2 mb-2 pt-3" id = "first-row">
+          <div id="cards-container" class="d-flex flex-wrap">  
+          </div>
+      </div>
+    </div>
+    <nav class="navbar fixed-bottom bg-body-tertiary">
+      <div class="col-3 col-sm-6">
+        <div class="social-icons">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="col-3 col-sm-6">
+        <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> 123 Rue Example, Ville</br>
+            <i class="fas fa-envelope"></i> contact@example.com</br>
+            <i class="fas fa-phone"></i> (123) 456-7890</p>
+        </div>
+      </div>
+    </nav>
+</div>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<!-- Bootstap Scipts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/d2149e3e03.js" crossorigin="anonymous"></script>
+<!-- Moment -->
+<script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment-locale-fr@1.0.0/fr.min.js"></script>
+<!-- Custom -->
+<script src="./assets/js/custom.js"></script>
+
+</body>
+</html>

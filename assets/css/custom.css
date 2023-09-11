@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+
+.background-image {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 100%;
+}
+
+.first-title {
+    font-family: 'Cookie' !important;
+    font-size: 36px !important;
+    color: darkblue;
+    text-decoration: orange wavy underline;
+}
+
+#first-row{
+    margin-top: 60px !important;
+}
+
+.social-icons {
+    text-align: left;
+    display: flex;
+    gap: 10px;
+}
+.social-icons a {
+    text-decoration: none !important;
+    color: #555;
+    font-size: 14px;
+}
+.social-icons li {
+    list-style: none !important;
+}
+
+.contact-info {
+    text-align: left;
+    font-size: 14px;
+    color: #555;
+}
+
+.card {
+    transition: border-color 0.3s; /* Ajouter un effet de transition */
+  }
+/* Définir la couleur orange de la carte */
+.card.border-orange {
+    border-color: orange;
+    border-width: 3px;
+}
+
+#carouselExampleIndicators{
+    max-height: 70% !important;
+}
+
+#img_carousel {
+    max-height: 100% !important;
+    height: auto;
+    width: auto;
+}
+
+#img_carousel img {
+    object-fit: cover;
+    height: 100% !important; 
+    width: 100% !important;
+}
